@@ -1,0 +1,105 @@
+:root{
+    --verde1 : #223929 ;
+}
+
+
+.cartCont{
+    border-bottom: 2px solid rgb(148, 144, 144);
+    padding: 10px ;
+    display: flex ;
+    justify-content: space-between;
+    width: 100% ;
+}
+.productImg{
+    position: relative;
+    width: 20%;
+    height: 100px;
+    background: bisque;
+    border-radius: 20px;   
+    object-fit: contain ;
+    overflow: hidden;
+}
+.productImg img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.productInfo{
+    position: relative;
+    width: 50% ;
+    display: flex ;
+    align-items: center ;
+    justify-content: start;
+}
+.prodBx{
+    position: relative ;
+    width: 180px;
+    padding: 15px;
+}
+.productName{
+    margin: auto 0;
+}
+.iconBx{
+    position: relative ;
+    width: 30%;
+    display: flex ;
+    align-items: flex-end;
+    justify-content: end;
+}
+.iconBx div {
+    margin-right: 10px;
+}
+.trash{
+    margin-left: 10px;
+}
+.addNumber{
+    font-size: 0.8em;
+    width: 15px;
+    height: 50px;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+}
+.addIcon, .trash{
+    color: orangered;
+    font-size: 1.3em;
+    cursor: pointer ;
+}
+.addIcon:hover, .trash:hover{
+    color: var(--verde1);
+}
+
+@media  (max-width: 638px){
+    .productImg{
+        width: 30%;
+        height: 80px;
+    }
+    .productInfo{
+        width: 50% ;
+    }
+    .prodBx{
+        position: relative ;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.7em;
+    }
+
+    .iconBx{
+        width: 20%;
+        font-size: 0.8em;
+    }
+    .iconBx div {
+        margin-right: 10px;
+    }
+    .trash{
+        margin-left: 10px;
+    }
+    .addNumber{
+        font-size: 0.8em;
+        width: 15px;
+        height: 50px;
+        display: flex ;
+        align-items: center ;
+        justify-content: center;
+    }
+}

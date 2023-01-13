@@ -1,0 +1,56 @@
+.bh {
+    width: 80px;
+    height: 80px ;
+}
+
+.bh li a {
+    position: relative;
+    text-decoration: none ;
+    background-color: white;
+    color: whitesmoke;
+    justify-content: center ;
+    align-items: center ;
+    position: relative ;
+    transform: perspective(1000px) rotate(-30deg) skew(30deg) translate(0,0);
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5) ;
+    transition: all 0.35s ;
+    width: 40px ;
+    height: 40px ;
+
+}  
+.bh li a i {
+    
+    font-size: 2em;
+}
+.bh li a::before, .bh li a::after {
+    position: absolute ;
+    content: '';
+    background-color: #ccc ;
+}
+.bh a::before{
+    width: 20px ;
+    height: 100% ;
+    left: -20px ;
+    top: 10px ;
+    transform: skewY(-45deg);
+}
+.bh a::after {
+    width: 100% ;
+    height: 20px ;
+    left: -11px ;
+    bottom: -20px ;
+    transform: skewX(-45deg);
+}
+.bh a:hover {
+    transform: perspective(1000px) rotate(-30deg) skew(30deg) translate(25px,-25px);
+    box-shadow: -30px 30px 10px rgba(0,0,0,0.3);
+}
+.bh i {
+    font-size: 2rem ;
+    color: #222 ;
+    transition: .35s;
+}
+.bh li:hover i {
+    color: orangered;
+}
+

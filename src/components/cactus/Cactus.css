@@ -1,0 +1,82 @@
+:root{
+    /*--------Azules-----------*/
+
+    --azul1 : #73c3e0 ; 
+    --azul2 : #50b7d7 ;
+    --azul3 : #aad3e9 ;
+    --azul4 : rgb(177, 228, 245) ;
+
+    /*--------Verdes------------*/
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+    --verde3 : #75ab7c ;
+    --verde4 : #b1e4f5 ;
+
+    /*-------Amarillo-----------*/
+    --amarillo1 : #fbdc05 ;
+    --amarillo2 : #eec104 ;
+    --amarillo3 : #fae726 ;
+    --amarillo4 : #dbae09 ;
+
+    --white : white ;
+
+    /*-----Background------*/
+    --catalogeBg :/*rgb(224, 245, 196)*/ whitesmoke;
+
+}
+
+*{
+    letter-spacing: 2px ;
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+}
+.contcard{
+    position: relative;
+    width: 100% ;
+    min-height: 100vh;
+    background: var(--catalogeBg);
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    
+
+}
+
+.fancy {
+    position: relative ;
+    width: 95% ;
+    min-height: 100vh;
+    top: 100px;
+    background: var(--catalogeBg);
+    
+}
+.headerCactus {
+    /*position: relative;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 2em;*/
+    position: relative;
+    width: 100% ;
+    text-align: center ;
+    text-transform: uppercase ;
+    font-size: 100px ;
+    font-weight: bold ;
+    color: orangered;
+
+}
+.gridCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
+}
+
+@media  (max-width: 809px) {
+    .gridCard{
+        display: block;
+    }
+    .headerCactus{
+        font-size: 60px;
+    }
+}

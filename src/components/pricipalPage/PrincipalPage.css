@@ -1,0 +1,199 @@
+:root{
+    /*--------Azules-----------*/
+
+    --azul1 : #73c3e0 ; 
+    --azul2 : #50b7d7 ;
+    --azul3 : #aad3e9 ;
+    --azul4 : rgb(177, 228, 245) ;
+
+    /*--------Verdes------------*/
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+    --verde3 : #75ab7c ;
+    --verde4 : #b1e4f5 ;
+
+    /*-------Amarillo-----------*/
+    --amarillo1 : #fbdc05 ;
+    --amarillo2 : #eec104 ;
+    --amarillo3 : #fae726 ;
+    --amarillo4 : #dbae09 ;
+
+    --white : white ;
+
+}
+@font-face {
+    font-family: m1;
+    src: url(./Anton-Regular.ttf);
+} 
+
+*{
+    
+    letter-spacing: 2px ;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page {
+    width: 100% ;
+    height: 100vh ;
+    background: #223929;
+    background-image: url(./thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+    background-size: cover ;
+    background-position: bottom;
+    background-attachment: fixed ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+
+}
+.container {
+    position: relative;
+    height: 90% ;
+    width: 90% ;
+    background: rgba(255, 255, 255, 0.6) ;
+    backdrop-filter: blur(300deg );
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.texto{
+   position: absolute;
+    width: 100% ;
+    height: 100vh;
+    z-index: 1;
+    text-align: center ;
+    text-transform: uppercase ;
+    font-size: 200px ;
+    font-weight: bold ;
+    display: flex ;
+    justify-content: center ;
+    align-items: flex-end;
+    
+    background-image: url(./thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+    background-size: cover ;
+    background-position: bottom;
+    background-attachment: fixed;
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent;
+}
+.Bx{
+    position: relative;
+    min-height: 70% ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    z-index: 2;
+}
+.cardBx {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    width: 100%;
+    height: 100%;
+     
+}
+    .Card {
+        display: flex ;
+        align-items: center ;
+        justify-content: center;
+    }
+
+
+/*-------SOCIAL MEDIA----------*/
+
+.SMBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+    align-items: center;
+    justify-content: center ;
+    
+    
+}
+.social_icons, .social_icons *{
+    display: flex ;
+}
+.social_icons {
+    list-style: none ;
+    width: 100% ;
+    height: 100% ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+.social_icons li {
+    position: relative;
+    width: 50px ;
+    height: 50px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 20px;
+    transition: all 0.35s ;
+    background-color: orangered;
+    border-radius: 50% ;
+    color: whitesmoke;
+}
+.social_icons li:hover {
+    transform: translateY(-20px);
+    background-color: var(--verde1);
+}
+
+
+/*---------BUTTON-----------*/
+.btBx {
+
+    display: flex ;
+    align-items: flex-start ;
+    justify-content: center;
+}
+.button {
+    width: 200px;
+    height: 50px ;
+    cursor: pointer ;
+    background: rgb(255, 69, 0);
+    border-radius: 30px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    color: white ;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.button:hover {
+    background: var(--verde1) ;
+    color: white;
+} 
+
+
+@media  (max-width: 872px) {
+    .texto{
+        font-size: 150px ;
+        top: -100px;  
+    }
+    .cardBx {
+
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+
+    }
+}
+@media  (max-width: 809px) {
+    .texto{
+        font-size: 80px ;
+        top: -100px;
+        
+     }
+    .Card {
+        display: flex ;
+        align-items: center ;
+        justify-content: center;
+    }
+}

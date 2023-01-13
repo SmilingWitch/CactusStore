@@ -1,0 +1,152 @@
+:root{
+    /*--------Azules-----------*/
+
+    --azul1 : #73c3e0 ; 
+    --azul2 : #50b7d7 ;
+    --azul3 : #aad3e9 ;
+    --azul4 : rgb(177, 228, 245) ;
+
+    /*--------Verdes------------*/
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+    --verde3 : #75ab7c ;
+    --verde4 : #b1e4f5 ;
+
+    /*-------Amarillo-----------*/
+    --amarillo1 : #fbdc05 ;
+    --amarillo2 : #eec104 ;
+    --amarillo3 : #fae726 ;
+    --amarillo4 : #dbae09 ;
+
+    --white : white ;
+
+}
+
+
+.allCard1{
+    position: relative;
+    height: 250px ;
+    width: 250px;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    
+}
+.card12{
+    position: relative;
+    background: rgba(255, 255, 255, 0.3) ;
+    backdrop-filter: blur(30deg );
+    width: 250px ;
+    height: 150px ;
+    border-radius: 20px ;
+    box-shadow: 1px 2px 16px 2px rgba(214,202,202,0.68);
+    -webkit-box-shadow: 1px 2px 16px 2px rgba(214,202,202,0.68);
+    -moz-box-shadow: 1px 2px 16px 2px rgba(214,202,202,0.68);
+    transition: 0.5s;
+}
+.card12:hover{
+    height: 200px ;
+}
+.card12:hover .imgBx1 {
+    width: 150px;
+    height: 150px;
+}
+
+.imgBx1{
+    position: relative ;
+    background: transparent;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    margin: 0 auto ;
+    top: -40px;
+    box-shadow: 1px 2px 16px 2px rgba(214,202,202,0.68);
+    -webkit-box-shadow: 1px 2px 16px 2px rgba(214,202,202,0.68);
+    -moz-box-shadow: 1px 2px 16px 2px rgba(214,202,202,0.68);
+    object-fit: contain ;
+    overflow: hidden;
+    transition: 0.5s;
+   
+}
+.imgBx1 img{
+    position: relative ;
+    width: 100% ;
+    height: 100%;
+}
+.namePlant{
+    position: relative;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    top: -20px;
+}
+.information{
+    position: relative;
+    display: flex ;
+    justify-content: space-between ;
+    top: -10px;
+    font-size: 0.8em;
+    padding: 10px;
+}
+.add{
+    background: orangered;
+    width: 20px;
+    height: 20px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    color: whitesmoke ;
+    border-radius: 5px;
+    cursor: pointer ;
+    transition: 1s;
+}
+.add:hover{
+    background: var(--verde1);
+}
+.mmm{
+    width: 100px ;
+    height: 100px ;
+    object-fit: cover ;
+
+}
+.mmm img{
+    width: 100% ;
+    height: 100%;
+    position: relative;
+}
+@media  (max-width: 809px) {
+    .allCard1{
+        width: 100%;
+        margin-bottom: 10px;
+        height: 150px;
+    }
+    .card12{
+        width: 90% ;
+        height: 150px ;
+        margin: 10px;
+      
+    }
+    .imgBx1{
+        position: relative ;
+        margin-left: 10px;
+        top: 10px;
+        width: 90px;
+        height: 90px;
+        
+    }
+    .namePlant{
+        top: -20px;
+        font-size: 0.8em;
+        width: 50% ;
+        left: 120px;
+       
+    }
+    .card12:hover{
+        height: 150px ;
+    }
+    .card12:hover .imgBx1 {
+        width: 90px;
+        height: 90px;
+    }
+
+}
