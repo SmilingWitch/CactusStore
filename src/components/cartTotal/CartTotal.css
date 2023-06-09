@@ -1,0 +1,73 @@
+:root{
+    --catalogeBg :whitesmoke;
+    --verde1 : #223929 ;
+
+}
+
+.cartPP{
+    background: var(--catalogeBg);
+    position: relative ;
+    width: 100% ;
+    min-height: calc(100vh + 100px) ;
+}
+
+.petitionsBx{
+    position: relative ;
+    width: 600px ;
+    min-height: 5;
+    top: 100px;
+    margin: 0 auto;
+}
+
+.gridCart {
+    position: relative;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr ));
+   
+}
+.cardcart{
+    position: relative;
+}
+
+.order{
+    position: relative;
+    width: 130px ;
+    height: 40px;
+    background: orangered;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    border-radius: 15px;
+    color: whitesmoke ;
+    font-size: 1em;
+    margin: 20px auto ;
+    top: 100px;  
+    transition: 0.5s;
+}
+.order:hover{
+    background: var(--verde1);
+}
+
+@media  (max-width: 638px){
+    .petitionsBx{
+        position: relative ;
+        width: 300px ;
+    }
+    .gridCart {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+    }
+    .infobar{
+        width: 300px;
+        font-size: 0.8em ;
+    }
+    .items{
+        width: 90px;
+    }
+    .order{
+        width: 100px ;
+        font-size: 0.8em;
+    }
+}
