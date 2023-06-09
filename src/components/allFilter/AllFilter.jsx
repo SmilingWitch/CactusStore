@@ -34,11 +34,9 @@ function AllFilter() {
         <div className="fancy">
             <div className="gridCard">
             {getDataS.map((item)=> {
-                console.log(item)
                 return <ProductCard name = {item.name} precio = {item.price} img = {item.photo}/>
             })}
             {getDataC.map((item)=> {
-                console.log(item)
                 return <ProductCard name = {item.name} precio = {item.price} img = {item.photo}/>
             })}
             </div>
