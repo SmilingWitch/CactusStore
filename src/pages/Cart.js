@@ -1,11 +1,12 @@
-import CartAdd from "../components/cartAdd/CartAdd";
+
+import CartTotal from "../components/CartTotal/CartTotal";
 
 
 
 function Cart() {
     return (
         <div>
-            <CartAdd/>     
+            <CartTotal/>     
         </div>
         );
     }
