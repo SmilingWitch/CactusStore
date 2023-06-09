@@ -2,6 +2,40 @@
     --verde1 : #223929 ;
 }
 
+.orderArea{
+    position: relative ;
+    width: 100%;
+    min-height: 100px;
+}
+
+.infobar{
+    position: relative;
+    width: 100% ;
+    height: 50px ;
+    border-radius: 10px;
+    background: rgb(233, 230, 230);
+    display: flex ;
+    align-items: center ;
+    justify-content: space-between;
+    margin: 0 auto ;
+    color: orangered;
+    padding: 10px;
+}
+.namebar{
+    position: relative ;
+    margin-left: 20px ;
+    font-weight: bolder;
+}
+.items{
+    position: relative ;
+    display: flex ;
+    align-items: center ;
+    justify-content: space-around;
+    width: 150px;
+}
+.items .totalItems{
+    font-weight: bolder;
+}
 
 .cartCont{
     border-bottom: 2px solid rgb(148, 144, 144);
@@ -9,6 +43,7 @@
     display: flex ;
     justify-content: space-between;
     width: 100% ;
+    
 }
 .productImg{
     position: relative;
