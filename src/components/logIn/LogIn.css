@@ -1,0 +1,11 @@
+:root{
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+}
+
+
+.principalContainer{
+    width: 90% ;
+    min-height: 90% ;
+    background: var(--verde2);
+}
