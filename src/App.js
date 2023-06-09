@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
+import { Home } from 'react-ionicons';
 import './App.css';
-import PrincipalPage from './components/pricipalPage/PrincipalPage';
+
 import { Routes, Route } from 'react-router-dom';
 import All from './pages/All';
 import Navbar from './components/navbar/Navbar';
@@ -9,15 +10,20 @@ import Cactus from './components/cactus/Cactus';
 import Suculentas from './components/suculentas/Suculentas';
 import Error from './components/error/Error';
 import HamburguerMenu from './components/hamburguerMenu/HamburguerMenu';
-import CartAdd from './components/cartAdd/CartAdd';
+import PrincipalPage from './components/pricipalPage/PrincipalPage';
+import CartTotal from './components/cartTotal/CartTotal';
+import LogIn from './components/logIn/LogIn';
+import Menu from "./components/menu/Menu"
+
+
 
 
 
 function App() {
-  return (
-    <div>
+  return ( 
+   <div>
 
-      <Navbar></Navbar>
+     <Navbar></Navbar>
       
       <Routes>
         <Route path = "*" element = { <PrincipalPage /> } />
@@ -26,9 +32,10 @@ function App() {
         <Route path = "/catalogue/succulent" element = {<Suculentas/>}/>
         <Route path = "/*" element = {<Error/>}> </Route>
         <Route path = "/info" element = {<Info/>}/>
-        <Route path = "/cart" element = {<CartAdd/>}/>
+        <Route path = "/cart" element = {<CartTotal/>}/>
+        <Route path = "/login" element = {<LogIn/>}/>
   </Routes>
-    </div>
+  </div>
     
   );
 }

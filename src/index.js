@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import All from './pages/All'
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -12,35 +11,27 @@ const router = createBrowserRouter([
     path : "/",
     element : <App/>,
     children: [
-      {
-        path: "/info",
-      },
-      {
-        path: "/*",
-      },
-      {
-        path: "/cart",
-      },
-      { 
-        path: "/catalogue",
-        children: [
-          {
-            path: "cactus",
-          },
-          {
-            path: "succulent",
-          },
-        ],
-      },
-    ],
+     { path : "/cart",
+     },
+     { path : "/info",
+    },
+    { path : "/login",
+    },
+    { path : "/catalogue",
+    },
+    { path : "/catalogue/cactus",
+    },
+    { path : "/catalogue/succulent",
+    },
+    ]
   },
   
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root')).render(
-
+  
   <React.StrictMode>
-    <RouterProvider router = {router} />
+      <RouterProvider router = {router} />
   </React.StrictMode>
 
   
