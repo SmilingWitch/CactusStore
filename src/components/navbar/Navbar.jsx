@@ -8,24 +8,44 @@ import { BsArrowDownShort } from "react-icons/bs";
 import axios from "axios";
 
 
-const orderedUrl = "http://localhost:3001/orderItem" ;
+const orderUrl = "http://localhost:3001/orderItem" ;
+
 
 
 function Navbar() {
 
     const [hMenu,setHmenu] = useState(false) ;
     const [CMenu,setCMenu] = useState(false) ;
-    const [totalItems, setTotalItems] = useState(0);
+    const [items, setItems] = useState();
+    const [circle, setCircle] = useState();
 
-        async function handleOrder() {
+
+    const loadItems = async () => {
+        const res = await axios.get(orderUrl);
+        setItems(res.data);   
+    };
+
+
+
+       /* async function handleOrder() {
             let items = 0;
-            let res = await axios.get(orderedUrl) ;
+            let res = await axios.get(orderUrl) ;
             res.data.map((item) =>{
                 items += item.qty
             })
             setTotalItems(items)
         }
-        handleOrder();
+        handleOrder();*/
+
+        const notifications = async (qty,id) => {
+            let item = 0;
+            if (qty !== 0) {
+                item = 1 ;
+            } else {
+                item = 0;
+            }
+            setCircle(item)
+        }
 
 
     return(
@@ -34,7 +54,7 @@ function Navbar() {
             <div className="bx">
                 <div className="logo1"><RiCactusFill/></div>
                 <div className="logoName">
-                 <span>Plant</span> <br />
+                 <span>Plant</span> 
                  <span>Desert</span>
                 </div>
             </div>  
@@ -86,7 +106,11 @@ function Navbar() {
             </div>
         </div>
         <div className="user">
-            <div className="log"> Login</div>
+        <div className =  "log">Login</div> 
+            {/*<NavLink to = "/login" className =  "log">
+                 
+                                    </NavLink>*/}
+            
             <div className="sing"> Sing up</div>
         </div>
 
@@ -95,9 +119,9 @@ function Navbar() {
                 <NavLink to = "/cart" className =  "cCart">
                     <BiCart className="iconCart"/>
                 </NavLink>
-                <div className="cartCircle">
-                    <span className="articles">{totalItems}</span>
-                </div>
+                {/*<div className = "cartCircle" >
+                    <span className="articles" ></span>
+                                    </div>*/}
             </div>
         
 
