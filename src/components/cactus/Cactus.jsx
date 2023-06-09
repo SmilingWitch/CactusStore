@@ -29,8 +29,8 @@ function Cactus() {
         </div>
         <div className="gridCard">
         {getDataC.map((item)=> {
-                console.log(item)
                 return <ProductCard name = {item.name} precio = {item.price} img = {item.photo}/>
+                
             })}
         </div>
     </div>
